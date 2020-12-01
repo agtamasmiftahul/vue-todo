@@ -5,7 +5,6 @@
     <label>New Todo</label>
     <input v-model="newTodo" name="newTodo">
     <button>Add New Todo</button>
-    <h3>{{ newTodo }}</h3>
   </form>
 </template>
 
@@ -17,7 +16,7 @@ export default {
     const newTodo = ref('')
 
     function addNewTodo() {
-      console.log('Form was submitted')
+      console.log(newTodo.value)
     }
 
     return {
