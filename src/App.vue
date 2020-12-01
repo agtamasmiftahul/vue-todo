@@ -1,7 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <h3>Vue 3 Todo App</h3>
-  <form>
+  <form @submit.prevent="addNewTodo">
     <label>New Todo</label>
     <input name="newTodo">
     <button>Add New Todo</button>
@@ -11,7 +11,15 @@
 <script>
 
 export default {
-  
+  setup() {
+    function addNewTodo() {
+      console.log('Form was submitted')
+    }
+
+    return {
+      addNewTodo
+    }
+  }
 }
 </script>
 

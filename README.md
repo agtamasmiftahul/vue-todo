@@ -4,7 +4,7 @@
 
 * [x] Setup
 * [x] Create New Todo Form
-* [] Call a function when the form is submitted
+* [x] Call a function when the form is submitted
 * [] Create a string property to store the user input
   * [] Watch the property change as we type in the input
 * [] Log the user input when the form is submitted
