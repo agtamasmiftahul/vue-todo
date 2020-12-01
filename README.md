@@ -3,7 +3,7 @@
 # Vue.js Todo App
 
 * [x] Setup
-* [] Create New Todo Form
+* [x] Create New Todo Form
 * [] Call a function when the form is submitted
 * [] Create a string property to store the user input
   * [] Watch the property change as we type in the input

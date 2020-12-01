@@ -1,6 +1,11 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <h3>Vue 3 Todo App</h3>
+  <form>
+    <label>New Todo</label>
+    <input name="newTodo">
+    <button>Add New Todo</button>
+  </form>
 </template>
 
 <script>
