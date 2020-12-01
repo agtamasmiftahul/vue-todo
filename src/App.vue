@@ -6,6 +6,13 @@
     <input v-model="newTodo" name="newTodo">
     <button>Add New Todo</button>
   </form>
+  <ul>
+    <li v-for="todo in todos" :key="todo.id">
+      <h3>
+        {{ todo.content }}
+      </h3>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -14,12 +21,19 @@ import { ref } from 'vue'
 export default {
   setup() {
     const newTodo = ref('')
+    const todos = ref([])
 
     function addNewTodo() {
-      console.log(newTodo.value)
+      todos.value.push({
+        id: Date.now(),
+        done: false,
+        content: newTodo.value
+      })
+      newTodo.value = ''
     }
 
     return {
+      todos,
       newTodo,
       addNewTodo
     }
