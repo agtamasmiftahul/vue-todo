@@ -5,8 +5,8 @@
 * [x] Setup
 * [x] Create New Todo Form
 * [x] Call a function when the form is submitted
-* [] Create a string property to store the user input
-  * [] Watch the property change as we type in the input
+* [x] Create a string property to store the user input
+  * [x] Watch the property change as we type in the input
 * [] Log the user input when the form is submitted
 * [] Create an array property for todos
 * [] Push the new todo into the todos array, with done: false
