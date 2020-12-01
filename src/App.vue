@@ -7,8 +7,8 @@
     <button>Add New Todo</button>
   </form>
   <ul>
-    <li v-for="todo in todos" :key="todo.id">
-      <h3>
+    <li v-for="todo in todos" :key="todo.id" class="todo">
+      <h3 :class="{ done: todo.done }" @click="markDone(todo)">
         {{ todo.content }}
       </h3>
     </li>
@@ -32,10 +32,15 @@ export default {
       newTodo.value = ''
     }
 
+    function markDone(todo) {
+      todo.done = !todo.done
+    }
+
     return {
       todos,
       newTodo,
-      addNewTodo
+      addNewTodo,
+      markDone
     }
   }
 }
