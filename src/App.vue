@@ -7,6 +7,7 @@
     <button>Add New Todo</button>
   </form>
   <button @click="markAllDone">Mark All Done</button>
+  <button @click="removeAllTodos">Remove All Todos</button>
   <ul>
     <li v-for="(todo, index) in todos" :key="todo.id" class="todo">
       <h3 :class="{ done: todo.done }" @click="markDone(todo)">
@@ -46,13 +47,18 @@ export default {
       todos.value.forEach((todo) => todo.done = true)
     }
 
+    function removeAllTodos() {
+      todos.value = []
+    }
+
     return {
       todos,
       newTodo,
       addNewTodo,
       markDone,
       removeTodo,
-      markAllDone
+      markAllDone,
+      removeAllTodos
     }
   }
 }

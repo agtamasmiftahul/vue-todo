@@ -15,6 +15,7 @@
   * [x] Show a line through the todo text
 * [x] Add a button to delete a todo
 * [x] Add a button to mark all todos as done
+* [x] Add a button to remove all todos
 
 
 ## Project setup
